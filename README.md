@@ -1,8 +1,47 @@
-# AVL-Tree
-An AVL tree is a special type of binary tree that is always "partially" balanced. The criteria that is used to determine the "level" of "balanced-ness" is the difference between the heights of sub-trees of a root in the tree. The "height" of tree is the "number of levels" in the tree.
-An AVL tree is a special type of binary tree that is always "partially" balanced. The criteria that is used to determine the "level" of "balanced-ness" is the difference between the heights of subtrees of a root in the tree. The "height" of tree is the "number of levels" in the tree. Or to be more formal, the height of a tree is defined as follows:
-The height of a tree with no elements is 0
-The height of a tree with 1 element is 1
-The height of a tree with > 1 element is equal to 1 + the height of its tallest subtree.
-An AVL tree is a binary tree in which the difference between the height of the right and left subtrees (or the root node) is never more than one.
-The idea behind maintaining the "AVL-ness" of an AVL tree is that whenever we insert or delete an item, if we have "violated" the "AVL-ness" of the tree in anyway, we must then restore it by performing a set of manipulations (called "rotations") on the tree. These rotations come in two flavors: single rotations and double rotations (and each flavor has its corresponding "left" and "right" versions).
+# AVL Tree
+
+An AVL tree is a special type of binary tree that is always "partially" balanced. This balance is determined by the difference in heights of the subtrees of any node in the tree. The height of a tree is defined as the number of levels it contains.
+
+## Definition of Height
+
+- The height of a tree with no elements is 0.
+- The height of a tree with one element is 1.
+- The height of a tree with more than one element is equal to 1 plus the height of its tallest subtree.
+
+## AVL Tree Characteristics
+
+An AVL tree is a binary tree in which the difference between the height of the right and left subtrees of any node is never more than one. This balance ensures that the tree remains efficient for operations like insertion, deletion, and lookup.
+
+## Maintaining Balance
+
+To maintain the "AVL-ness" of an AVL tree, whenever an item is inserted or deleted, we must ensure that the tree remains balanced. If the insertion or deletion causes the tree to become unbalanced, we restore balance by performing rotations. These rotations can be either single or double, and each type has left and right versions.
+
+### Types of Rotations
+
+1. **Single Rotations:**
+   - **Left Rotation**
+   - **Right Rotation**
+
+2. **Double Rotations:**
+   - **Left-Right Rotation**
+   - **Right-Left Rotation**
+
+## Implementation
+
+The implementation of an AVL tree typically involves the following steps:
+
+1. **Insertion:**
+   - Insert the new node as in a regular binary search tree.
+   - Update the height of the ancestor nodes.
+   - Check for balance at each ancestor node.
+   - Perform rotations if the tree becomes unbalanced.
+
+2. **Deletion:**
+   - Remove the node as in a regular binary search tree.
+   - Update the height of the ancestor nodes.
+   - Check for balance at each ancestor node.
+   - Perform rotations if the tree becomes unbalanced.
+
+---
+
+For further details and advanced usage, you can refer to the documentation and source code within the repository.
